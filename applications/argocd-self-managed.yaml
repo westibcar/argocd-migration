@@ -13,15 +13,15 @@ spec:
     # Fonte 1: Helm chart oficial do Argo CD
     - repoURL: https://argoproj.github.io/argo-helm
       chart: argo-cd
-      targetRevision: 5.31.0
+      targetRevision: 5.32.0
       helm:
         releaseName: argocd
         valueFiles:
           # Referência ao arquivo do Git (via $values abaixo)
-          - $values/cenario-2-migracao-manual-para-gitops/helm-values/base-values.yaml
+          - $values/helm-values/base-values.yaml
 
-    # Fonte 2: Seu Git repo com os values extraídos
-    - repoURL: https://github.com/SEU-ORG/SEU-REPO.git  # <- substituir pelo repo real
+    # Fonte 2: Git repo com os values
+    - repoURL: https://github.com/westibcar/argocd-migration.git
       targetRevision: HEAD
       ref: values  # alias usado no valueFiles acima como $values
 
