@@ -2,13 +2,10 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
-EXTRACT_DIR="${REPO_ROOT}/cenario-2-migracao-manual-para-gitops/extracted-config"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+EXTRACT_DIR="${REPO_ROOT}/extracted-config"
 
 echo "=== Validação de Extração ==="
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/..)" && pwd)"
-EXTRACT_DIR="${REPO_ROOT}/extracted-config"
 
 echo "=== Validação de Extração ==="
 echo

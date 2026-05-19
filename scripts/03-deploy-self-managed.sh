@@ -2,12 +2,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
-APP_FILE="${REPO_ROOT}/cenario-2-migracao-manual-para-gitops/applications/argocd-self-managed.yaml"
-
-echo "=== Deploy de Argo CD Self-Managed ==="
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/..)" && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 APP_FILE="${REPO_ROOT}/applications/argocd-self-managed.yaml"
 
 echo "=== Deploy de Argo CD Self-Managed ==="
