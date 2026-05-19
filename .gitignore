@@ -1,0 +1,30 @@
+# Secrets e dados sensíveis - NUNCA commitar!
+# Toda a pasta extracted-config é backup local, não vai para o Git
+extracted-config/
+extracted-config/secrets/
+extracted-config/**/*.raw
+extracted-config/**/*-secrets*
+*.key
+*.pem
+*.crt
+
+# Arquivos temporários
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Arquivos de log
+*.log
+
+# Merged values (gerado automaticamente)
+helm-values/merged-values.yaml
+
+# Backup local
+/backup/
+/tmp/
+
+# IDE
+.vscode/
+.idea/
+*.iml

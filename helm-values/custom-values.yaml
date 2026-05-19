@@ -1,0 +1,31 @@
+# Customizações Específicas da Sua Empresa
+# Coloque aqui qualquer mudança em relação ao base-values.yaml
+
+# Exemplo: Se você usar SSO com GitHub
+# configs:
+#   params:
+#     oidc.config: |
+#       name: GitHub
+#       issuer: https://github.com
+#       clientID: YOUR_CLIENT_ID
+#       clientSecret: YOUR_CLIENT_SECRET
+
+# Exemplo: Se você tiver ingress customizado
+# ingress:
+#   enabled: true
+#   className: nginx
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#   hosts:
+#     - host: argocd.seu-dominio.com.br
+#       paths:
+#         - path: /
+#           pathType: Prefix
+
+# Exemplo: Se você quiser mudar replicas
+# applicationController:
+#   replicas: 3
+# repoServer:
+#   replicas: 3
+
+# Adicione suas customizações aqui:

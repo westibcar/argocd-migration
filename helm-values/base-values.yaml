@@ -1,0 +1,17 @@
+# =============================================================================
+# base-values.yaml
+# Gerado por: helm get values argocd -n argocd -o yaml
+# Data: 2026-05-19
+#
+# COMO ATUALIZAR:
+#   helm get values argocd -n argocd -o yaml > helm-values/base-values.yaml
+#   git add helm-values/base-values.yaml
+#   git commit -m "chore: atualiza values do Argo CD"
+# =============================================================================
+
+configs:
+  params:
+    server.insecure: true
+server:
+  service:
+    type: ClusterIP
