@@ -2,9 +2,9 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
-EXTRACT_DIR="${REPO_ROOT}/cenario-2-migracao-manual-para-gitops/extracted-config"
-HELM_VALUES_DIR="${REPO_ROOT}/cenario-2-migracao-manual-para-gitops/helm-values"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+EXTRACT_DIR="${REPO_ROOT}/extracted-config"
+HELM_VALUES_DIR="${REPO_ROOT}/helm-values"
 
 mkdir -p "$EXTRACT_DIR" "$HELM_VALUES_DIR"
 

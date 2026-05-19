@@ -76,6 +76,7 @@ cenario-2-migracao-manual-para-gitops/
 
 5. **Validar migração**:
    ```bash
+   ## Arquivos Neste Cenário
    bash scripts/04-verify-migration.sh
    ```
 

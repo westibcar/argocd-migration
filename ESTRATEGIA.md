@@ -5,12 +5,21 @@
 Seu Argo CD foi instalado manualmente com Helm:
 
 ```bash
-# Instalação original (sem versionamento)
+# ❌ Instalação com erro (NÃO FAZER ASSIM!)
 helm install argocd argo/argo-cd \
   --namespace argocd \
   --create-namespace \
   --version 2.7.0 \
-  [valores aqui via flags ou arquivo]
+  --skip-crds  # ← ERRO: Remove isso! Causa falha na Application
+
+# ✅ Instalação CORRETA
+kubectl apply -k https://github.com/argoproj/argo-cd/manifests/crds?ref=v2.7.0
+helm repo add argo https://argoproj.github.io/argo-helm
+helm repo update
+helm install argocd argo/argo-cd \
+  --namespace argocd \
+  --create-namespace \
+  --version 2.7.0
 ```
 
 Depois, foram feitas customizações **diretas no cluster**:

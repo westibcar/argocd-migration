@@ -13,7 +13,7 @@ spec:
     # Fonte 1: Helm chart oficial do Argo CD
     - repoURL: https://argoproj.github.io/argo-helm
       chart: argo-cd
-      targetRevision: 5.32.0
+      targetRevision: 5.31.0
       helm:
         releaseName: argocd
         valueFiles:
